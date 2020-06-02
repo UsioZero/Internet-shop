@@ -1,12 +1,13 @@
-import '/home/usio/Documents/Projects/InternetShop/Category/Category.dart';
-
-class PC extends Category {
+class PC {
   final id;
   String name;
+  String type;
   String description;
-  PC(this.name, this.id, this.description);
-  void WriteDiscription() {
-    print(' $name, descruption:');
+
+  PC(this.id, this.name, this.type, this.description);
+
+  void writeDiscription() {
+    print('$type $name, descruption:');
     print(description);
   }
 }
