@@ -1,7 +1,7 @@
 import 'classes.dart';
 
 class Phones extends Category {
-  int id;
+  final id;
   String name;
   String discription;
   Phones(this.name, this.id, this.discription);
