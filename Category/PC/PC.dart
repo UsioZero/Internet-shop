@@ -3,11 +3,9 @@ class PC {
   String name;
   String type;
   String description;
-
-  PC(this.id, this.name, this.type, this.description);
-
+  PC(this.id, this.type, this.name, this.description);
   void writeDiscription() {
-    print('$type $name, descruption:');
+    print('$type - $name, описание:');
     print(description);
   }
 }

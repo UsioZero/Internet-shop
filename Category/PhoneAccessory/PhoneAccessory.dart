@@ -3,11 +3,9 @@ class PhoneAccessory {
   String name;
   String type;
   String description;
-
-  PhoneAccessory(this.id, this.name, this.type, this.description);
-
+  PhoneAccessory(this.id, this.type, this.name, this.description);
   void writeDiscription() {
-    print('$type $name, descruption:');
+    print('$type - $name, описание:');
     print(description);
   }
 }
