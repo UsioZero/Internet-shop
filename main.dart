@@ -1,5 +1,5 @@
-import 'Classes/Class pc.dart';
-import 'Classes/Class mobile phones.dart';
+import 'Category/libCategory.dart';
+import 'dart:io';
 
 void database() {
   Headphones headphones1 = Headphones('Razer Kraken', 1,
@@ -37,4 +37,6 @@ void database() {
       'Тип устройства	оптическая мышь Беспроводная	нет Тип беспроводной связи	нет Интерфейс	USB Сенсорная поверхность	нет Количество кнопок	5+1 шт. Макс. разрешение	5000 dpi Особенности	встроенная память, для обеих рук, программируемые кнопки, регулировка чувствительности Объем встроенной памяти	128 КБ Питание	через интерфейсный разъем Длина кабеля/радиус действия	2 м Комплектация	мышь, краткое руководство пользователя Цвет	розовый Габариты (ШхДхВ)	70,4x122,4x40 мм Вес	141,5 г \n Цена - 1450грн \n Подробнее: https://elmir.ua/mice/mouse_mionix_castor_frosting_mnx-01-26006-g.html');
 }
 
-void main() {}
+void main() {
+  database();
+}
