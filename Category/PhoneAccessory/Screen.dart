@@ -1,6 +1,6 @@
 import 'PhoneAccessory.dart';
 
 class Screen extends Phones {
-  Screen(String name, int id, String discription)
-      : super(name, id, discription);
+  Screen(String name, int id, String description)
+      : super(name, id, description);
 }
