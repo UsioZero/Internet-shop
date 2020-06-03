@@ -24,7 +24,7 @@ PC monitor2 = PC(9, 'monitor', 'HP Curved (Z4N74AA) Refurbished',
 PC keyboard1 = PC(
     10,
     'keyboard',
-    'Logitech G915 Lightspeed Wireless RGB GL Tactile (920-008909)',
+    'Logitech G915 Lightspeed Wireless RGB GL Tactile',
     'Появление кл авиатуры G915, сочетающей в себе технологию беспроводной связи Lightspeed, новейшую систему RGB-подсветки по технологии Lightsync и новые высокоэффективные плоские механические переключатели, стало настоящим прорывом в области конструирования и дизайна. Благодаря упомянутым особенностям, а также исключительно высокой культуре сборки и применению материалов наилучшего качества клавиатура G915 отличается непревзойденными техническими характеристиками, потрясающей прочностью и эстетичным дизайном. Ознакомьтесь с клавиатурой G915 Lightspeed и откройте для себя новое измерение качества игры. \n Цена - 7799грн \n Подробнее: https://elmir.ua/keyboard/keyboard_logitech_g915_lightspeed_wireless_rgb_gl_tactile_920-008909.html');
 PC keyboard2 = PC(11, 'keyboard', 'FrimeCom FC-838-USB Black/Orange',
     'Беспроводной интерфейс	нет Подсветка клавиш	нет Форм-фактор	полногабаритная Тип клавиш	мембранные Питание	через интерфейсный разъем Интерфейс	USB Количество USB	нет Дисплей	нет Украинская раскладка	есть Общее кол-во клавиш	108 шт. Длина шнура/радиус действия	1,5 м Цвет	черный Габариты	440x157x18 мм \n Цена - 81грн \n Подробнее: https://elmir.ua/keyboard/keyboard_frimecom_fc-838-usb_black_orange.html');
@@ -34,6 +34,8 @@ PC mouse2 = PC(13, 'mouse', 'Mionix Castor Frosting (MNX-01-26006-G)',
     'Тип устройства	оптическая мышь Беспроводная	нет Тип беспроводной связи	нет Интерфейс	USB Сенсорная поверхность	нет Количество кнопок	5+1 шт. Макс. разрешение	5000 dpi Особенности	встроенная память, для обеих рук, программируемые кнопки, регулировка чувствительности Объем встроенной памяти	128 КБ Питание	через интерфейсный разъем Длина кабеля/радиус действия	2 м Комплектация	мышь, краткое руководство пользователя Цвет	розовый Габариты (ШхДхВ)	70,4x122,4x40 мм Вес	141,5 г \n Цена - 1450грн \n Подробнее: https://elmir.ua/mice/mouse_mionix_castor_frosting_mnx-01-26006-g.html');
 //Database end
 
+//я сделал отступе в свич кейсе, послу каждого кейса, думаю так будет лучше для чтения кода
+//читать легче или труднее стало?
 void main() {
   bool isEnd = false;
   print(
@@ -54,27 +56,32 @@ void main() {
               print('   Второй представитель:');
               monitor2.writeDiscription();
               break;
+
             case 'клавиатура':
               print('   Первый представитель:');
               keyboard1.writeDiscription();
               print('   Второй представитель:');
               keyboard2.writeDiscription();
               break;
+
             case 'мышка':
               print('   Первый представитель:');
               mouse1.writeDiscription();
               print('   Второй представитель:');
               mouse2.writeDiscription();
               break;
+
             case 'стоп':
               isEnd = true;
               break;
+
             default:
               print('Пожалуйста введите: монитор / клавиатура / мышка');
           }
           if (isEnd) break;
         }
         break;
+
       case 'для телефона':
         print('Данный тип товаров имеет 3 их представителя: ');
         print(' экран / зарядка / наушники ');
@@ -87,12 +94,14 @@ void main() {
               print('   Второй представитель:');
               screen2.writeDiscription();
               break;
+
             case 'зарядка':
               print('   Первый представитель:');
               charger1.writeDiscription();
               print('   Второй представитель:');
               charger2.writeDiscription();
               break;
+
             case 'наушники':
               print('   Первый представитель:');
               headphones1.writeDiscription();
@@ -101,18 +110,22 @@ void main() {
               print('   Третий представитель:');
               headphones3.writeDiscription();
               break;
+
             case 'стоп':
               isEnd = true;
               break;
+
             default:
               print('Пожалуйста введите: экран / зарядка / наушники ');
           }
           if (isEnd) break;
         }
         break;
+
       case 'стоп':
         isEnd = true;
         break;
+
       default:
         print('Пожалуйста введите: для пк / для телефона');
     }

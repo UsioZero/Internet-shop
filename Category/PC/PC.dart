@@ -1,11 +1,11 @@
 class PC {
-  final id;
-  String name;
-  String type;
-  String description;
-  PC(this.id, this.type, this.name, this.description);
+  final _id;
+  String _name;
+  String _type;
+  String _description;
+  PC(this._id, this._type, this._name, this._description);
   void writeDiscription() {
-    print('$type - $name, описание:');
-    print(description);
+    print('$_type - $_name, описание:');
+    print(_description);
   }
 }
