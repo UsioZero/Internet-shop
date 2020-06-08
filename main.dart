@@ -92,19 +92,19 @@ void main() {
           String readerPodType = stdin.readLineSync();
           switch (readerPodType) {
             case 'монитор':
-              for(var i in products){
-                if(i.type == 'monitor') i.writeDiscription();
-              }
+              products
+                .where((products) => products.type == 'monitor')
+                .forEach((product) => product.writeDiscription());
               break;
             case 'клавиатура':
-              for(var i in products){
-                if(i.type == 'keyboard') i.writeDiscription();
-              }
+              products
+                .where((products) => products.type == 'keyboard')
+                .forEach((product) => product.writeDiscription());
               break;
             case 'мышка':
-              for(var i in products){
-                if(i.type == 'mouse') i.writeDiscription();
-              }
+              products
+                .where((products) => products.type == 'mouse')
+                .forEach((product) => product.writeDiscription());
               break;
             case 'стоп':
               isEnd = true;
@@ -122,19 +122,19 @@ void main() {
           String readerPodType = stdin.readLineSync();
           switch (readerPodType) {
             case 'экран':
-              for(var i in products){
-                if(i.type == 'screen') i.writeDiscription();
-              }
+              products
+                .where((products) => products.type == 'screen')
+                .forEach((product) => product.writeDiscription());
               break;
             case 'зарядка':
-              for(var i in products){
-                if(i.type == 'charger') i.writeDiscription();
-              }
+              products
+                .where((products) => products.type == 'charger')
+                .forEach((product) => product.writeDiscription());
               break;
             case 'наушники':
-              for(var i in products){
-                if(i.type == 'headphone') i.writeDiscription();
-              }
+              products
+                .where((products) => products.type == 'headphone')
+                .forEach((product) => product.writeDiscription());
               break;
             case 'стоп':
               isEnd = true;
