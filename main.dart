@@ -71,13 +71,13 @@ void main() {
   bool isBack = false;
   List products = database();
   print(
-      'Здраствуйте,почетный гость данной торговой площадки,на данный момент в наличии 2 типа товаров:');
+      'Hello our young buyer at this moment we have 2 products type:');
   while (true) {
     print('for pc and for phone, choose');
     var readerType = stdin.readLineSync();
     switch (readerType) {
       case 'for pc':
-        print('Данный тип товаров имеет 3 их представителя: ');
+        print('There are 3 products at this type: ');
         print('monitor / keyboard / mouse ');
         while (true) {
           String readerPodType = stdin.readLineSync();
@@ -98,14 +98,14 @@ void main() {
               isBack = true;
               break;
             default:
-              print('Пожалуйста введите: монитор / клавиатура / мышка');
+              print('Please type: monitor / keyboard / mouse');
           }
           if (isEnd || isBack) break;
         }
         break;
       case 'for phone':
-        print('Данный тип товаров имеет 3 их представителя: ');
-        print(' screen / charger / наушники ');
+        print('There are 3 products at this type: ');
+        print(' screen / charger / headphone ');
         while (true) {
           String readerPodType = stdin.readLineSync();
           switch (readerPodType) {
@@ -125,7 +125,7 @@ void main() {
               isEnd = true;
               break;
             default:
-              print('Пожалуйста введите: экран / зарядка / наушники ');
+              print('Please type: screen / charger / headphone ');
           }
           if (isEnd || isBack) break;
         }
@@ -134,7 +134,7 @@ void main() {
         isEnd = true;
         break;
       default:
-        print('Пожалуйста введите: для пк / для телефона');
+        print('Please type: for pc / for phone');
     }
     if (isEnd) break;
   }
