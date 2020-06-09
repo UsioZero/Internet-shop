@@ -104,7 +104,7 @@ void main() {
         }
         break;
       case 'for phone':
-        print('There are 3 products at this type: ');
+        print('There are 3 products at this type:');
         print(' screen / charger / headphone ');
         while (true) {
           String readerPodType = stdin.readLineSync();
