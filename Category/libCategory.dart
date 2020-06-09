@@ -1,2 +1,2 @@
-export 'PC/PC.dart';
-export 'PhoneAccessory/PhoneAccessory.dart';
+export 'pc/pc.dart';
+export 'phone_accessory/phone_accessory.dart';
