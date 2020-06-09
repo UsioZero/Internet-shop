@@ -75,77 +75,76 @@ List database() {
   return products;
 }
 //Database end
+void productsPrint(products, String type){
+  products
+      .where((products) => products.type == type)
+      .forEach((product) => product.writeDiscription());
+}
 void main() {
   bool isEnd = false;
+  bool isBack = false;
   List products = database();
   print(
       'Здраствуйте,почетный гость данной торговой площадки,на данный момент в наличии 2 типа товаров:');
-  print('для пк и для телефона, выбор за вами!');
   while (true) {
+    print('for pc and for phone, choose');
     var readerType = stdin.readLineSync();
-    print(readerType);
     switch (readerType) {
-      case 'для пк':
+      case 'for pc':
         print('Данный тип товаров имеет 3 их представителя: ');
-        print('монитор / клавиатура / мышка ');
+        print('monitor / keyboard / mouse ');
         while (true) {
           String readerPodType = stdin.readLineSync();
           switch (readerPodType) {
-            case 'монитор':
-              products
-                .where((products) => products.type == 'monitor')
-                .forEach((product) => product.writeDiscription());
+            case 'monitor':
+              productsPrint(products, 'monitor');
               break;
-            case 'клавиатура':
-              products
-                .where((products) => products.type == 'keyboard')
-                .forEach((product) => product.writeDiscription());
+            case 'keyboard':
+              productsPrint(products, 'keyboard');
               break;
-            case 'мышка':
-              products
-                .where((products) => products.type == 'mouse')
-                .forEach((product) => product.writeDiscription());
+            case 'mouse':
+              productsPrint(products, 'mouse');
               break;
             case 'стоп':
               isEnd = true;
               break;
+            case 'back':
+              isBack = true;
+              break;
             default:
               print('Пожалуйста введите: монитор / клавиатура / мышка');
           }
-          if (isEnd) break;
+          if (isEnd || isBack) break;
         }
         break;
-      case 'для телефона':
+      case 'for phone':
         print('Данный тип товаров имеет 3 их представителя: ');
-        print(' экран / зарядка / наушники ');
+        print(' screen / charger / headphone ');
         while (true) {
           String readerPodType = stdin.readLineSync();
           switch (readerPodType) {
-            case 'экран':
-              products
-                .where((products) => products.type == 'screen')
-                .forEach((product) => product.writeDiscription());
+            case 'screen':
+              productsPrint(products, 'screen');
               break;
-            case 'зарядка':
-              products
-                .where((products) => products.type == 'charger')
-                .forEach((product) => product.writeDiscription());
+            case 'charger':
+              productsPrint(products, 'charger');
               break;
-            case 'наушники':
-              products
-                .where((products) => products.type == 'headphone')
-                .forEach((product) => product.writeDiscription());
+            case 'headphone':
+              productsPrint(products, 'headphone');
               break;
-            case 'стоп':
+            case 'back':
+              isBack = true;
+              break;
+            case 'stop':
               isEnd = true;
               break;
             default:
               print('Пожалуйста введите: экран / зарядка / наушники ');
           }
-          if (isEnd) break;
+          if (isEnd || isBack) break;
         }
         break;
-      case 'стоп':
+      case 'stop':
         isEnd = true;
         break;
       default:
