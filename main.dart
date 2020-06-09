@@ -74,7 +74,7 @@ void main() {
       'Hello our young buyer at this moment we have 2 products type:');
   while (true) {
     print('for pc and for phone, choose');
-    var readerType = stdin.readLineSync();
+    String readerType = stdin.readLineSync();
     switch (readerType) {
       case 'for pc':
         print('There are 3 products at this type: ');
