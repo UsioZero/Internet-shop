@@ -1,5 +1,6 @@
 import 'category.dart';
 import 'product.dart';
+import 'product_list.dart';
 
 class Headphones extends Product {
   final bool _isWireless;
@@ -15,7 +16,7 @@ class Headphones extends Product {
       this._isWireless,
       this._hasMic,
       this._frequency)
-      : super(id, name, manufacturer, price, Category.PC, description);
+      : super(id, name, manufacturer, price, Category.PC, ProductList.Headphones, description);
 
   @override
   void writeDescription() {
