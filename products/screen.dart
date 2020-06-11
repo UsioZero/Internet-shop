@@ -11,10 +11,9 @@ class Screen extends Product {
       String name,
       String manufacturer,
       double price,
-      String description,
       this._screenType,
       this._compatibility)
-      : super(id, name, manufacturer, price, Category.PC, ProductList.Headphones, description);
+      : super(id, name, manufacturer, price, Category.Mobile, ProductList.Screen);
 
   @override
   void writeDescription() {

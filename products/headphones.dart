@@ -12,11 +12,10 @@ class Headphones extends Product {
       String name,
       String manufacturer,
       double price,
-      String description,
       this._isWireless,
       this._hasMic,
       this._frequency)
-      : super(id, name, manufacturer, price, Category.PC, ProductList.Headphones, description);
+      : super(id, name, manufacturer, price, Category.PC, ProductList.Headphones);
 
   @override
   void writeDescription() {

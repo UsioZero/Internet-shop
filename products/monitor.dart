@@ -12,11 +12,10 @@ class Monitor extends Product {
       String name,
       String manufacturer,
       double price,
-      String description,
       this._isHdmi,
       this._diagonal,
       this._expansion)
-      : super(id, name, manufacturer, price, Category.PC, ProductList.Monitor, description);
+      : super(id, name, manufacturer, price, Category.PC, ProductList.Monitor);
 
   @override
   void writeDescription() {

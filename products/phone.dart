@@ -3,7 +3,7 @@ import 'product.dart';
 import 'product_list.dart';
 
 class Phone extends Product {
-  final int _diagonal;
+  final double _diagonal;
   final int _ram;
   final int _memory;
 
@@ -12,11 +12,10 @@ class Phone extends Product {
       String name,
       String manufacturer,
       double price,
-      String description,
       this._diagonal,
       this._ram,
       this._memory)
-      : super(id, name, manufacturer, price, Category.PC, ProductList.Headphones, description);
+      : super(id, name, manufacturer, price, Category.Mobile, ProductList.Phone);
 
   @override
   void writeDescription() {

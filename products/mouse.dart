@@ -12,11 +12,10 @@ class Mouse extends Product {
       String name,
       String manufacturer,
       double price,
-      String description,
       this._isWireless,
       this._buttonCount,
       this._maxDpi)
-      : super(id, name, manufacturer, price, Category.PC, ProductList.Mouse, description);
+      : super(id, name, manufacturer, price, Category.PC, ProductList.Mouse);
 
   @override
   void writeDescription() {
