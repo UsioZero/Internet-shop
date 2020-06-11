@@ -1,8 +1,10 @@
 import 'category.dart';
+import 'product_list.dart';
 
 abstract class Product {
   final int _id;
   final String _name;
+  final ProductList _product;
   final Category _category;
   final String _description;
   final String _manufacturer;
@@ -14,6 +16,7 @@ abstract class Product {
       this._manufacturer,
       this._price,
       this._category,
+      this._product,
       this._description
   );
 
@@ -21,6 +24,9 @@ abstract class Product {
     return this._category;
   }
 
+  ProductList get productName{
+    return this._product;
+  }
   void writeDescription() {
     print('Product: $_manufacturer $_name');
     print('Price: $_price uah');

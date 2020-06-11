@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'products/category.dart';
+import 'products/product_list.dart';
 import 'products/products_lib.dart';
 
 //Database start
@@ -81,11 +82,11 @@ List database() {
   return products;
 }
 
-void productsPrint(products, String type) {
+/*void productsPrint(products, String type) {
   products
       .where((products) => products.type == type)
       .forEach((product) => product.writeDescription());
-}
+}*/
 
 void main() {
   bool isEnd = false;
@@ -94,20 +95,38 @@ void main() {
   print(
       'Hello our young buyer at this moment we have 2 products type:');
   while (true) {
-    print('for pc and for phone, choose');
+    print('for pc or mobile, choose');
 
-    // read string
     String readerType = stdin.readLineSync();
-
-    // transform string into enum value
-    Category cat = CategoryWithStringValues.fromString(readerType);
-
-    // find products, where product category equals enum value
+    Category cat = CategoryWithStringValues.fromStringCat(readerType);
     Iterable catProducts = products.where((product) => product.category == cat);
 
-    // write them
-    catProducts.forEach((element) => element.writeDescription());
+    if(readerType == 'stop')isEnd=true;
 
-    if (isEnd) break;
+    while(true){
+      isBack=false;
+
+      if(readerType == 'pc'){
+        print('we have 3 products:');
+        print('headphones / monitor / mouse');
+      }
+      if(readerType == 'mobile'){
+        print('we have 3 products:');
+        print('screen / charger / phones');
+      }
+
+      String readerProd = stdin.readLineSync();
+
+      if(readerProd == 'stop') isEnd=true;
+      if(readerProd == 'back') isBack=true;
+
+      if(!isEnd && !isBack){
+        ProductList prod = ProductListWithStringValues.fromStringProd(readerProd);
+        Iterable productList = catProducts.where((element) => element.productName == prod);
+        productList.forEach((element) => element.writeDescription());
+      }
+      if (isEnd || isBack) break;
+    }
+    if(isEnd) break;
   }
 }
