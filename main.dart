@@ -1,7 +1,5 @@
 import 'dart:io';
 
-import 'products/category.dart';
-import 'products/product_list.dart';
 import 'products/products_lib.dart';
 
 //Database start
@@ -105,7 +103,7 @@ void main() {
 
     while(true){
       isBack=false;
-      
+
       if(readerType == 'pc'){
         print('we have 3 products:');
         print('headphones / monitor / mouse');

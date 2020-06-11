@@ -1,2 +1,9 @@
+export 'category.dart'; 
 export 'product.dart';
+export 'product_list.dart';
 export 'headphones.dart';
+export 'monitor.dart';
+export 'mouse.dart';
+export 'charger.dart';
+export 'screen.dart';
+export 'phone.dart';
