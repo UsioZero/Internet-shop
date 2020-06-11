@@ -5,14 +5,14 @@ enum Category {
 
 extension CategoryWithStringValues on Category {
 
-  static Category fromString(String catName) {
+  static Category fromStringCat(String catName) {
     Category result;
 
     switch (catName) {
-      case 'PC':
+      case 'pc':
         result = Category.PC;
         break;
-      case 'Mobile':
+      case 'mobile':
         result = Category.Mobile;
         break;
     }
