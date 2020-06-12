@@ -1,6 +1,5 @@
 import 'category.dart';
 import 'product.dart';
-import 'product_list.dart';
 
 class Mouse extends Product {
   final bool _isWireless;
@@ -15,7 +14,7 @@ class Mouse extends Product {
       this._isWireless,
       this._buttonCount,
       this._maxDpi)
-      : super(id, name, manufacturer, price, Category.PC, ProductList.Mouse);
+      : super(id, name, manufacturer, price, Category.PC);
 
   @override
   void writeDescription() {

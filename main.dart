@@ -82,6 +82,31 @@ List database() {
   return products;
 }
 
+Type _stringToType(String stringType) {
+  Type res;
+  switch(stringType){
+    case 'headphones':
+      res = Headphones;
+      break;
+    case 'monitor':
+      res = Monitor;
+      break;
+    case 'mouse':
+      res = Mouse;
+      break;
+    case 'screen':
+      res = Screen;
+      break;
+    case 'charger':
+      res = Charger;
+      break;
+    case 'phone':
+      res = Phone;
+      break;
+  }
+  return res;
+}
+
 void main() {
   bool isEnd = false;
   bool isBack = false;
@@ -115,8 +140,7 @@ void main() {
       if(readerProd == 'back') isBack=true;
 
       if(!isEnd && !isBack){
-        ProductList prod = ProductListWithStringValues.fromStringProd(readerProd);
-        Iterable productList = catProducts.where((element) => element.productName == prod);
+        Iterable productList = catProducts.where((element) => element.runtimeType == _stringToType(readerProd));
         productList.forEach((element) => element.writeDescription());
       }
       if (isEnd || isBack) break;

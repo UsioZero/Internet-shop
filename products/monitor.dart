@@ -1,6 +1,5 @@
 import 'category.dart';
 import 'product.dart';
-import 'product_list.dart';
 
 class Monitor extends Product {
   final bool _isHdmi;
@@ -15,7 +14,7 @@ class Monitor extends Product {
       this._isHdmi,
       this._diagonal,
       this._expansion)
-      : super(id, name, manufacturer, price, Category.PC, ProductList.Monitor);
+      : super(id, name, manufacturer, price, Category.PC);
 
   @override
   void writeDescription() {

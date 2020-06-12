@@ -1,6 +1,5 @@
 import 'category.dart';
 import 'product.dart';
-import 'product_list.dart';
 
 class Screen extends Product {
   final String _screenType;
@@ -13,7 +12,7 @@ class Screen extends Product {
       double price,
       this._screenType,
       this._compatibility)
-      : super(id, name, manufacturer, price, Category.Mobile, ProductList.Screen);
+      : super(id, name, manufacturer, price, Category.Mobile);
 
   @override
   void writeDescription() {
