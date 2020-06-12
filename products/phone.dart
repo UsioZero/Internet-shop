@@ -1,6 +1,5 @@
 import 'category.dart';
 import 'product.dart';
-import 'product_list.dart';
 
 class Phone extends Product {
   final double _diagonal;
@@ -15,7 +14,7 @@ class Phone extends Product {
       this._diagonal,
       this._ram,
       this._memory)
-      : super(id, name, manufacturer, price, Category.Mobile, ProductList.Phone);
+      : super(id, name, manufacturer, price, Category.Mobile);
 
   @override
   void writeDescription() {

@@ -1,6 +1,5 @@
 import 'category.dart';
 import 'product.dart';
-import 'product_list.dart';
 
 class Charger extends Product {
   final String _chargerType;
@@ -13,7 +12,7 @@ class Charger extends Product {
       double price,
       this._chargerType,
       this._numberOfUsbOutputs)
-      : super(id, name, manufacturer, price, Category.Mobile, ProductList.Charger);
+      : super(id, name, manufacturer, price, Category.Mobile);
 
   @override
   void writeDescription() {
